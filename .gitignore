@@ -1,6 +1,4 @@
-bin/
-dist/
-deploy/
+target/
 *.iml
 .idea
 *.class

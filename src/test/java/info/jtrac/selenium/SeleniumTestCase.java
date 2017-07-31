@@ -57,7 +57,7 @@ public abstract class SeleniumTestCase extends TestCase {
             } catch(Exception e) {
                 throw new RuntimeException(e);
             }
-            JtracSelenium s = new JtracSelenium("localhost", SeleniumServer.getDefaultPort(), "*iexplore", "http://localhost:8080/jtrac");
+            JtracSelenium s = new JtracSelenium("localhost", server.getPort(), "*iexplore", "http://localhost:8080/jtrac");
             s.start();
             return s;
         }
@@ -75,6 +75,12 @@ public abstract class SeleniumTestCase extends TestCase {
     protected void stopSelenium() {
         selenium.stop();
         server.stop();
+    }
+
+    @Override
+    public final void tearDown() {
+
+
     }
     
     /**

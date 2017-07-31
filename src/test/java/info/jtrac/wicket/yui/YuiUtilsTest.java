@@ -10,7 +10,7 @@ public class YuiUtilsTest extends TestCase {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("foo", true);
         map.put("bar", false);        
-        assertEquals("{foo : true, bar : false}", YuiUtils.getJson(map));
+        assertEquals("{bar : false, foo : true}", YuiUtils.getJson(map));
     }
     
 }

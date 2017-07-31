@@ -11,63 +11,7 @@
         and drop-downs. Features include customizable workflow, field level permissions, e-mail integration, 
         file attachments and a detailed history view.
     </description>
-    <url>http://jtrac.info</url>
-    
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>license.txt</url>
-        </license>
-    </licenses>
-    
-    <scm>
-        <connection>scm:svn:https://j-trac.svn.sourceforge.net/svnroot/j-trac/trunk/jtrac</connection>
-        <url>http://j-trac.svn.sourceforge.net/viewvc/j-trac/trunk/jtrac/</url>
-    </scm>
-    
-    <distributionManagement>
-        <site>
-            <id>website</id>
-            <url>scp://shell.sourceforge.net/home/groups/j/j-/j-trac/htdocs</url>
-        </site>
-    </distributionManagement>
-    
-    <mailingLists>
-        <mailingList>
-            <name>JTrac Mailing List</name>
-            <subscribe>https://lists.sourceforge.net/lists/listinfo/j-trac-users</subscribe>
-            <unsubscribe>-</unsubscribe>
-            <post>-</post>
-            <archive>http://sourceforge.net/mailarchive/forum.php?forum_name=j-trac-users</archive>
-            <otherArchives>
-                <otherArchive>http://www.nabble.com/j-trac-users-f20276.html</otherArchive>
-            </otherArchives>
-        </mailingList>
-    </mailingLists>
-    
-    <developers>
-        <developer>
-            <name>Peter Thomas</name>
-            <id>ptrthomas</id>
-            <url>http://ptrthomas.wordpress.com</url>
-            <timezone>+5.5</timezone>
-        </developer>
-        <developer>
-            <name>Manfred Wolff</name>
-            <id>manfredwolff</id>
-            <url>http://pointers.de</url>
-            <timezone>+1</timezone>
-        </developer>
-    </developers>
-    
-    <repositories>
-        <repository>
-            <id>openqa.org</id>
-            <name>selenium snapshot</name>
-            <url>http://nexus.openqa.org/content/repositories/releases</url>
-        </repository>
-    </repositories>
-    
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -403,18 +347,20 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- Selenium        -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
-            <groupId>org.openqa.selenium.client-drivers</groupId>
-            <artifactId>selenium-java-client-driver</artifactId>
-            <version>0.9.0</version>
-            <scope>test</scope>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.21.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
         <dependency>
-            <groupId>org.openqa.selenium.server</groupId>
+            <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server</artifactId>
-            <version>0.9.0</version>
-            <scope>test</scope>
+            <version>2.14.0</version>
         </dependency>
+
     </dependencies>
     
     <build>
@@ -442,8 +388,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <!--
