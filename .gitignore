@@ -1,0 +1,8 @@
+bin/
+dist/
+deploy/
+*.iml
+.idea
+*.class
+*.war
+*.log
